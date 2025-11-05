@@ -2,7 +2,8 @@ extends CharacterBody2D
 
 # 속도 설정
 @export var speed: float = 200.0
-
+func _ready():
+	add_to_group("Player") 
 func _physics_process(delta):
 	var direction = Vector2.ZERO
 
