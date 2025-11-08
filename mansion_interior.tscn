@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://dq62iuxjejasf"]
+[gd_scene load_steps=22 format=4 uid="uid://dq62iuxjejasf"]
 
 [ext_resource type="Script" uid="uid://dgv2168flboc5" path="res://character_body_2d.gd" id="1_hssue"]
 [ext_resource type="Texture2D" uid="uid://dkyuqkan2yq6n" path="res://image.png" id="2_35jaj"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://g27egroyt6kd" path="res://캐릭터_성_타일_팩O__Tiny Pixel Fantasy - Base Pack (1)/Tiles/CastleExterior/CastleExterior_2_2.png" id="7_v0oso"]
 [ext_resource type="Texture2D" uid="uid://fvni7aan8xjq" path="res://kenney_tiny-town_마을_팩O/Tilemap/tilemap_packed.png" id="8_am7bp"]
 [ext_resource type="Texture2D" uid="uid://dbts21nor3aa6" path="res://kenney_tiny-town_마을_팩O/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="9_tld6o"]
+[ext_resource type="Script" uid="uid://c4b1p6gtap5ko" path="res://area_2d_1.gd" id="10_35jaj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v52kk"]
 texture = ExtResource("3_ayqnp")
@@ -41,9 +42,13 @@ texture = ExtResource("5_hsouo")
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_kh4xw"]
 texture = ExtResource("6_kt8dq")
 0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jevhu"]
 texture = ExtResource("7_v0oso")
@@ -2116,6 +2121,7 @@ texture_region_size = Vector2i(17, 17)
 59:31/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_6f25e"]
+physics_layer_0/collision_layer = 1
 sources/0 = SubResource("TileSetAtlasSource_v52kk")
 sources/1 = SubResource("TileSetAtlasSource_ae0l7")
 sources/2 = SubResource("TileSetAtlasSource_y255l")
@@ -2126,6 +2132,11 @@ sources/6 = SubResource("TileSetAtlasSource_n7lko")
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2oqlj"]
 size = Vector2(40, 59)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ayqnp"]
+size = Vector2(193, 278)
+
+[sub_resource type="LabelSettings" id="LabelSettings_4s8p7"]
 
 [node name="mansioninterior" type="Node2D"]
 
@@ -2160,3 +2171,23 @@ shape = SubResource("RectangleShape2D_2oqlj")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(30, 19)
+
+[node name="Area2D1" type="Area2D" parent="."]
+position = Vector2(289, -402)
+script = ExtResource("10_35jaj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D1"]
+visibility_layer = 2
+position = Vector2(-5, 704)
+shape = SubResource("RectangleShape2D_ayqnp")
+
+[node name="Label" type="Label" parent="Area2D1"]
+offset_left = -99.0
+offset_top = 621.0
+offset_right = 93.0
+offset_bottom = 898.0
+text = "E : Enter"
+label_settings = SubResource("LabelSettings_4s8p7")
+
+[connection signal="body_entered" from="Area2D1" to="Area2D1" method="_on_body_entered"]
+[connection signal="body_exited" from="Area2D1" to="Area2D1" method="_on_body_exited"]
