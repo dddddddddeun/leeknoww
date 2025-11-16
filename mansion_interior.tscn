@@ -1,15 +1,38 @@
-[gd_scene load_steps=22 format=4 uid="uid://dq62iuxjejasf"]
+[gd_scene load_steps=45 format=4 uid="uid://dq62iuxjejasf"]
 
 [ext_resource type="Script" uid="uid://dgv2168flboc5" path="res://character_body_2d.gd" id="1_hssue"]
-[ext_resource type="Texture2D" uid="uid://dkyuqkan2yq6n" path="res://image.png" id="2_35jaj"]
-[ext_resource type="Texture2D" uid="uid://bhrx68oih11k2" path="res://캐릭터_성_타일_팩O__Tiny Pixel Fantasy - Base Pack (1)/Tiles/CityInterior/CityInterior_1_2.png" id="3_ayqnp"]
-[ext_resource type="Texture2D" uid="uid://cifeallf7pxk5" path="res://캐릭터_성_타일_팩O__Tiny Pixel Fantasy - Base Pack (1)/Tiles/CityInterior/CityInterior_2_1.png" id="4_4s8p7"]
-[ext_resource type="Texture2D" uid="uid://n1k4ydrthpf2" path="res://캐릭터_성_타일_팩O__Tiny Pixel Fantasy - Base Pack (1)/Tiles/CityInterior/CityInterior_2_3.png" id="5_hsouo"]
-[ext_resource type="Texture2D" uid="uid://bvo55uuqyp7fo" path="res://캐릭터_성_타일_팩O__Tiny Pixel Fantasy - Base Pack (1)/Tiles/CastleInterior/CastleInterior_7_1.png" id="6_kt8dq"]
-[ext_resource type="Texture2D" uid="uid://g27egroyt6kd" path="res://캐릭터_성_타일_팩O__Tiny Pixel Fantasy - Base Pack (1)/Tiles/CastleExterior/CastleExterior_2_2.png" id="7_v0oso"]
-[ext_resource type="Texture2D" uid="uid://fvni7aan8xjq" path="res://kenney_tiny-town_마을_팩O/Tilemap/tilemap_packed.png" id="8_am7bp"]
-[ext_resource type="Texture2D" uid="uid://dbts21nor3aa6" path="res://kenney_tiny-town_마을_팩O/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="9_tld6o"]
+[ext_resource type="Texture2D" uid="uid://bhrx68oih11k2" path="res://Tiny_pixel_pack/Tiles/CityInterior/CityInterior_1_2.png" id="3_ayqnp"]
+[ext_resource type="Texture2D" uid="uid://cifeallf7pxk5" path="res://Tiny_pixel_pack/Tiles/CityInterior/CityInterior_2_1.png" id="4_4s8p7"]
+[ext_resource type="Texture2D" uid="uid://n1k4ydrthpf2" path="res://Tiny_pixel_pack/Tiles/CityInterior/CityInterior_2_3.png" id="5_hsouo"]
+[ext_resource type="Texture2D" uid="uid://bvo55uuqyp7fo" path="res://Tiny_pixel_pack/Tiles/CastleInterior/CastleInterior_7_1.png" id="6_kt8dq"]
+[ext_resource type="Texture2D" uid="uid://g27egroyt6kd" path="res://Tiny_pixel_pack/Tiles/CastleExterior/CastleExterior_2_2.png" id="7_v0oso"]
+[ext_resource type="Texture2D" uid="uid://fvni7aan8xjq" path="res://kenney_tiny-town/Tilemap/tilemap_packed.png" id="8_am7bp"]
+[ext_resource type="Texture2D" uid="uid://dbts21nor3aa6" path="res://kenney_tiny-town/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="9_tld6o"]
+[ext_resource type="Texture2D" uid="uid://iu77otuvlurk" path="res://main_up.png" id="10_2sju2"]
 [ext_resource type="Script" uid="uid://c4b1p6gtap5ko" path="res://area_2d_1.gd" id="10_35jaj"]
+[ext_resource type="Texture2D" uid="uid://drbox07r3qa0b" path="res://m_up_frame1.png" id="11_qokf1"]
+[ext_resource type="Texture2D" uid="uid://ng0kjoq6rr06" path="res://m_up_frame2.png" id="12_ctc7o"]
+[ext_resource type="Texture2D" uid="uid://471xr05ihy8d" path="res://pixil-frame-0.png" id="13_n0yae"]
+[ext_resource type="Texture2D" uid="uid://cj52etrpoplcn" path="res://m_down_frame1.png" id="14_yx8fb"]
+[ext_resource type="Texture2D" uid="uid://c6m7qwuvtdm87" path="res://main_down_frame2.png" id="15_mtco3"]
+[ext_resource type="Texture2D" uid="uid://b6xcfi1s5esip" path="res://main_left.png" id="16_obtwg"]
+[ext_resource type="Texture2D" uid="uid://dul0fmd16eclp" path="res://m_left_frame1.png" id="17_jp88h"]
+[ext_resource type="Texture2D" uid="uid://8dlopnu54wh0" path="res://m_left_frame2.png" id="18_xsoec"]
+[ext_resource type="Texture2D" uid="uid://bku3owjvd6rx0" path="res://main_right.png" id="19_atvjv"]
+[ext_resource type="Texture2D" uid="uid://g07kyq3h1n8f" path="res://m_right_frame1.png" id="20_47273"]
+[ext_resource type="Texture2D" uid="uid://1cjqcp2kp17s" path="res://m_right_frame2.png" id="21_usx2b"]
+[ext_resource type="Texture2D" uid="uid://bgb2565mntppm" path="res://m_upleft.png" id="22_3te2o"]
+[ext_resource type="Texture2D" uid="uid://dxhjjmlg4x5rd" path="res://m_upleft_frame1.png" id="23_3jxqh"]
+[ext_resource type="Texture2D" uid="uid://bjq4n5k1ru4jn" path="res://m_upleft_frame2.png" id="24_01km1"]
+[ext_resource type="Texture2D" uid="uid://llv044uf557" path="res://m_upright.png" id="25_ooa64"]
+[ext_resource type="Texture2D" uid="uid://d2bnl1mqh3sa8" path="res://m_upright_frame1.png" id="26_1q7a7"]
+[ext_resource type="Texture2D" uid="uid://b6ewk142st5e6" path="res://m_upright_frame2.png" id="27_aasto"]
+[ext_resource type="Texture2D" uid="uid://wwssfpxkl86y" path="res://main_leftdown.png" id="28_a6hao"]
+[ext_resource type="Texture2D" uid="uid://djf4fuotat80j" path="res://m_downleft_frame1.png" id="29_rh34n"]
+[ext_resource type="Texture2D" uid="uid://cxafi1kj7u55x" path="res://m_downleft_frame2.png" id="30_gied5"]
+[ext_resource type="Texture2D" uid="uid://yca8q8y5e1wc" path="res://main_rightdown.png" id="31_13vw6"]
+[ext_resource type="Texture2D" uid="uid://ci0g4lsnrnbxp" path="res://m_downright_frame1.png" id="32_2wb7s"]
+[ext_resource type="Texture2D" uid="uid://t25dmuflvfjq" path="res://m_down_right_frame2.png" id="33_dbegw"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_v52kk"]
 texture = ExtResource("3_ayqnp")
@@ -2130,13 +2153,13 @@ sources/4 = SubResource("TileSetAtlasSource_jevhu")
 sources/5 = SubResource("TileSetAtlasSource_ntq5c")
 sources/6 = SubResource("TileSetAtlasSource_n7lko")
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oqlj"]
-size = Vector2(40, 59)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ayqnp"]
 size = Vector2(193, 278)
 
 [sub_resource type="LabelSettings" id="LabelSettings_4s8p7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_802d6"]
+size = Vector2(40, 59)
 
 [node name="mansioninterior" type="Node2D"]
 
@@ -2155,23 +2178,6 @@ scale = Vector2(3, 3)
 tile_map_data = PackedByteArray("AAAFAAYABgAJAAMAAAAGAAYABgAJAAMAAAD+/wUABgAJAAMAAAD//wUABgAJAAMAAAAAAAUABgAJAAMAAAABAAUABgAJAAMAAAACAAUABgAJAAMAAAADAAUABgAJAAMAAAAEAAUABgAJAAMAAAAFAAUABgAJAAMAAAAGAAUABgAJAAMAAAAHAAUABgAJAAMAAAAIAAUABgAJAAMAAAAJAAUABgAJAAMAAAAKAAUABgAJAAMAAAALAAUABgAJAAMAAAAMAAUABgAJAAMAAAANAAUABgAJAAMAAAANAAQABgAJAAMAAAANAAMABgAJAAMAAAAMAAMABgAJAAMAAAALAAMABgAJAAMAAAAKAAMABgAJAAMAAAAJAAMABgAJAAMAAAAIAAMABgAJAAMAAAAHAAQABgAJAAMAAAAGAAQABgAJAAMAAAAFAAQABgAJAAMAAAAEAAQABgAJAAMAAAADAAQABgAJAAMAAAACAAQABgAJAAMAAAABAAMABgAJAAMAAAAAAAMABgAJAAMAAAD//wMABgAJAAMAAAD//wQABgAJAAMAAAD+/wQABgAJAAMAAAAAAAQABgAJAAMAAAABAAQABgAJAAMAAAAIAAQABgAJAAMAAAAJAAQABgAJAAMAAAAKAAQABgAJAAMAAAALAAQABgAJAAMAAAACAAMABgAJAAMAAAADAAMABgAJAAMAAAAEAAMABgAJAAMAAAAMAAQABgAJAAMAAAAHAAMABgAJAAMAAAAGAAMABgAJAAMAAAAFAAMABgAJAAMAAAD+/wMABgAJAAMAAAAOAAUABgAJAAMAAAAOAAQABgAJAAMAAAAOAAMABgAJAAMAAAAOAAIABgAJAAMAAAD9/wUABgAJAAMAAAD9/wQABgAJAAMAAAD9/wMABgAJAAMAAAD9/wIABgAJAAMAAAD+/wIABgAJAAMAAAD//wIABgAJAAMAAAAAAAIABgAIAAIAAAABAAIABgAJAAMAAAACAAIABgAJAAMAAAADAAIABgAJAAMAAAAEAAIABgAJAAMAAAAFAAIABgAJAAMAAAAGAAIABgAJAAMAAAAHAAIABgAJAAMAAAAIAAIABgAJAAMAAAAJAAIABgAJAAMAAAAKAAIABgAJAAMAAAALAAIABgAJAAMAAAAMAAIABgAJAAMAAAANAAIABgAJAAMAAAAHAAEABgAJAAMAAAAGAAEABgAJAAMAAAA=")
 tile_set = SubResource("TileSet_6f25e")
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(253, 286)
-script = ExtResource("1_hssue")
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-position = Vector2(36, 19)
-scale = Vector2(3, 3)
-texture = ExtResource("2_35jaj")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
-light_mask = 1023
-position = Vector2(36, 16.5)
-shape = SubResource("RectangleShape2D_2oqlj")
-
-[node name="Camera2D" type="Camera2D" parent="Player"]
-position = Vector2(30, 19)
-
 [node name="Area2D1" type="Area2D" parent="."]
 position = Vector2(289, -402)
 script = ExtResource("10_35jaj")
@@ -2188,6 +2194,31 @@ offset_right = 93.0
 offset_bottom = 898.0
 text = "E : Enter"
 label_settings = SubResource("LabelSettings_4s8p7")
+
+[node name="Player" type="CharacterBody2D" parent="."]
+position = Vector2(261, 257)
+script = ExtResource("1_hssue")
+sprite_up_frames = Array[Texture]([ExtResource("10_2sju2"), ExtResource("11_qokf1"), ExtResource("12_ctc7o")])
+sprite_down_frames = Array[Texture]([ExtResource("13_n0yae"), ExtResource("14_yx8fb"), ExtResource("15_mtco3")])
+sprite_left_frames = Array[Texture]([ExtResource("16_obtwg"), ExtResource("17_jp88h"), ExtResource("18_xsoec")])
+sprite_right_frames = Array[Texture]([ExtResource("19_atvjv"), ExtResource("20_47273"), ExtResource("21_usx2b")])
+sprite_up_left_frames = Array[Texture]([ExtResource("22_3te2o"), ExtResource("23_3jxqh"), ExtResource("24_01km1")])
+sprite_up_right_frames = Array[Texture]([ExtResource("25_ooa64"), ExtResource("26_1q7a7"), ExtResource("27_aasto")])
+sprite_down_left_frames = Array[Texture]([ExtResource("28_a6hao"), ExtResource("29_rh34n"), ExtResource("30_gied5")])
+sprite_down_right_frames = Array[Texture]([ExtResource("31_13vw6"), ExtResource("32_2wb7s"), ExtResource("33_dbegw")])
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+position = Vector2(36, 19)
+scale = Vector2(3, 3)
+texture = ExtResource("13_n0yae")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+light_mask = 1023
+position = Vector2(36, 16.5)
+shape = SubResource("RectangleShape2D_802d6")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+position = Vector2(30, 19)
 
 [connection signal="body_entered" from="Area2D1" to="Area2D1" method="_on_body_entered"]
 [connection signal="body_exited" from="Area2D1" to="Area2D1" method="_on_body_exited"]

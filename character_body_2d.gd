@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 @export var speed: float = 200.0
-@onready var sprite: Sprite2D = $Sprite
+@onready var sprite: Sprite2D = $Sprite2D
 
 # 각 방향별 3프레임 (idle, walk1, walk2)
 @export var sprite_up_frames: Array[Texture] = []
@@ -58,9 +58,9 @@ func _physics_process(delta):
 			sprite.texture = frames[0]
 		_frame_index = 1
 		_frame_timer = 0.0
-
 	# 이동
 	velocity = direction * speed
+	move_and_slide()
 
 
 # === 방향별 프레임 배열 반환 ===
