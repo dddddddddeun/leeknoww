@@ -1,6 +1,6 @@
-[gd_scene load_steps=52 format=4 uid="uid://euyb817lhkj"]
+[gd_scene load_steps=51 format=4 uid="uid://euyb817lhkj"]
 
-[ext_resource type="Script" uid="uid://cjjanse4lglk7" path="res://quest_ui.gd" id="1_elocp"]
+[ext_resource type="Script" uid="uid://d1e0r21sru1p0" path="res://day1/day_1_scene_1.gd" id="1_l6w8r"]
 [ext_resource type="Texture2D" uid="uid://b1vkm55b4ji1u" path="res://kenney_tiny-town/Tilemap/tilemap_packed.png" id="2_l6w8r"]
 [ext_resource type="Texture2D" uid="uid://17u6rk34mfw3" path="res://craftpix-net-654184/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="3_yj1n4"]
 [ext_resource type="Texture2D" uid="uid://c5pqpkoes3fpb" path="res://kenney_tiny-town/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="4_i3san"]
@@ -33,8 +33,6 @@
 [ext_resource type="Script" uid="uid://c6mif5k8ehx2w" path="res://police.gd" id="31_ijx7x"]
 [ext_resource type="Texture2D" uid="uid://75la2jh7l124" path="res://policefront.png" id="32_si72m"]
 [ext_resource type="Script" uid="uid://b2vyau4hxigd2" path="res://area_2d_2_1.gd" id="33_ajiu8"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elocp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd1y5"]
 texture = ExtResource("2_l6w8r")
@@ -4345,7 +4343,7 @@ sources/1 = SubResource("TileSetAtlasSource_t0rxu")
 size = Vector2(40, 54)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1nkp2"]
-size = Vector2(193, 336)
+size = Vector2(193, 303)
 
 [sub_resource type="LabelSettings" id="LabelSettings_gk6se"]
 
@@ -4364,24 +4362,8 @@ size = Vector2(190, 114)
 
 [sub_resource type="LabelSettings" id="LabelSettings_vhlgy"]
 
-[node name="scene_1" type="Node2D"]
-
-[node name="QuestUI" type="CanvasLayer" parent="."]
-script = ExtResource("1_elocp")
-
-[node name="PanelContainer" type="PanelContainer" parent="QuestUI"]
-custom_minimum_size = Vector2(250, 50)
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -250.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = 20.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_elocp")
-
-[node name="quest_list" type="VBoxContainer" parent="QuestUI/PanelContainer"]
-layout_mode = 2
+[node name="day1_scene_1" type="Node2D"]
+script = ExtResource("1_l6w8r")
 
 [node name="방지턱" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)
@@ -4429,14 +4411,14 @@ script = ExtResource("30_37sr3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 visibility_layer = 2
-position = Vector2(43, 717)
+position = Vector2(43, 700.5)
 shape = SubResource("RectangleShape2D_1nkp2")
 
 [node name="Label" type="Label" parent="Area2D"]
 offset_left = -50.0
 offset_top = 564.0
 offset_right = 142.0
-offset_bottom = 880.0
+offset_bottom = 847.0
 text = "E : Enter"
 label_settings = SubResource("LabelSettings_gk6se")
 vertical_alignment = 2

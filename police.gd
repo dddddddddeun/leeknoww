@@ -56,6 +56,7 @@ func _on_dialogue_finished():
 		QuestManager.complete_quest("police_talk_1")
 	elif talk_count == 2:
 		QuestManager.complete_quest("police_talk_2")
+	print("[POLICE] dialogue finished received! talk_count =", talk_count)
 
 
 func _on_area_2d_body_entered(body):

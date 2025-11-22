@@ -119,4 +119,5 @@ func next():
 func end_dialogue():
 	ui_panel.visible = false
 	talking = false
+	print("[DialogueManager] 대화 종료 signal emit!")
 	emit_signal("dialogue_finished")

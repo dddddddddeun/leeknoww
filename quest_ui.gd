@@ -1,29 +1,39 @@
 extends CanvasLayer
 
-@onready var quest_list: VBoxContainer = null
+var quest_list: VBoxContainer = null
 
 func _ready():
-	# 안전하게 노드 찾기
-	if has_node("Panel/QuestList"):
-		quest_list = get_node("Panel/QuestList")
-	else:
-		print("[QuestUI] Panel/QuestList not found!")
-		return
+	_find_list_node()
 
-	# 신호 연결
+	await get_tree().process_frame  # 첫 프레임 기다리기
+	_update_ui()
+
 	QuestManager.quest_added.connect(_update_ui)
 	QuestManager.quest_started.connect(_update_ui)
 	QuestManager.quest_completed.connect(_update_ui)
 	QuestManager.quests_loaded.connect(_update_ui)
 
-	_update_ui()
 
+
+func _find_list_node():
+	# PanelContainer/quest_list 찾기
+	if has_node("PanelContainer/quest_list"):
+		quest_list = get_node("PanelContainer/quest_list")
+		print("[QuestUI] Loaded quest_list from PanelContainer/quest_list")
+		return
+
+	# Panel/QuestList 찾기
+	if has_node("Panel/QuestList"):
+		quest_list = get_node("Panel/QuestList")
+		print("[QuestUI] Loaded quest_list from Panel/QuestList")
+		return
+
+	print("[QuestUI] ERROR: QuestList 노드를 찾지 못함")
 
 func _update_ui():
 	if quest_list == null:
 		return
 
-	# 기존 UI 제거
 	for child in quest_list.get_children():
 		child.queue_free()
 
@@ -32,15 +42,14 @@ func _update_ui():
 	for id in quests.keys():
 		var q = quests[id]
 
-		if q["status"] == "not_started":
-			continue
-
 		var label := Label.new()
 
-		if q["status"] == "completed":
-			label.text = "🟢 " + q["name"]
-			label.add_theme_color_override("font_color", Color.GRAY)
-		else:
-			label.text = "🔹 " + q["name"]
+		match q["status"]:
+			"not_started":
+				label.modulate = Color(1, 1, 1)
 
+			"completed":
+				label.modulate = Color(0.6, 1, 0.6)
+
+		label.text = "%s: %s" % [q["name"], q["status"]]
 		quest_list.add_child(label)

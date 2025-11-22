@@ -1,6 +1,5 @@
-[gd_scene load_steps=132 format=4 uid="uid://clahkbukvxntc"]
+[gd_scene load_steps=130 format=4 uid="uid://clahkbukvxntc"]
 
-[ext_resource type="Script" uid="uid://cjjanse4lglk7" path="res://quest_ui.gd" id="1_57kvh"]
 [ext_resource type="Texture2D" uid="uid://c5pqpkoes3fpb" path="res://kenney_tiny-town/kenney_roguelike-rpg-pack/Spritesheet/roguelikeSheet_transparent.png" id="1_mi8hg"]
 [ext_resource type="Texture2D" uid="uid://b1vkm55b4ji1u" path="res://kenney_tiny-town/Tilemap/tilemap_packed.png" id="2_57kvh"]
 [ext_resource type="Texture2D" uid="uid://ynnbtxi3ety2" path="res://Tiny_pixel_pack/Tiles/Outside/Outside_4_2.png" id="3_uhsfi"]
@@ -64,8 +63,6 @@
 [ext_resource type="Texture2D" uid="uid://d17sjgr41w2r2" path="res://m_downright_frame1.png" id="61_p1x2p"]
 [ext_resource type="Texture2D" uid="uid://dmlw3lniavgpu" path="res://m_down_right_frame2.png" id="62_darff"]
 [ext_resource type="Script" uid="uid://cgfvecuqwgx3p" path="res://area_2d_.gd" id="63_l83aq"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uhsfi"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_33628"]
 texture = ExtResource("1_mi8hg")
@@ -17571,25 +17568,8 @@ size = Vector2(193, 278)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cw1jv"]
 size = Vector2(40, 59)
 
-[node name="scene2" type="Node2D"]
+[node name="day1_scene_2" type="Node2D"]
 position = Vector2(-274, 433)
-
-[node name="QuestUI" type="CanvasLayer" parent="."]
-script = ExtResource("1_57kvh")
-
-[node name="PanelContainer" type="PanelContainer" parent="QuestUI"]
-custom_minimum_size = Vector2(250, 50)
-anchors_preset = 1
-anchor_left = 1.0
-anchor_right = 1.0
-offset_left = -250.0
-offset_top = 20.0
-offset_right = -20.0
-offset_bottom = 20.0
-theme_override_styles/panel = SubResource("StyleBoxFlat_uhsfi")
-
-[node name="quest_list" type="VBoxContainer" parent="QuestUI/PanelContainer"]
-layout_mode = 2
 
 [node name="화단" type="TileMapLayer" parent="."]
 scale = Vector2(3, 3)

@@ -19,7 +19,7 @@ config/features=PackedStringArray("4.4", "Forward Plus")
 DialogueManager="*res://dialogue_manager.gd"
 QuestManager="*res://quest_manager.gd"
 DayManager="*res://day_manager.gd"
-QuestUI="*res://quest_ui.gd"
+QuestUi="*res://QuestUI.tscn"
 
 [display]
 
