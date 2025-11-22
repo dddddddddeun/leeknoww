@@ -34,7 +34,7 @@
 [ext_resource type="Texture2D" uid="uid://75la2jh7l124" path="res://policefront.png" id="32_si72m"]
 [ext_resource type="Script" uid="uid://b2vyau4hxigd2" path="res://area_2d_2_1.gd" id="33_ajiu8"]
 
-[sub_resource type="LabelSettings" id="LabelSettings_a2qhw"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_elocp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nd1y5"]
 texture = ExtResource("2_l6w8r")
@@ -4353,7 +4353,7 @@ size = Vector2(193, 336)
 size = Vector2(43, 65)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_572ix"]
-size = Vector2(204.5, 203)
+size = Vector2(137, 203)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2lqri"]
 size = Vector2(190, 114)
@@ -4366,36 +4366,21 @@ size = Vector2(190, 114)
 
 [node name="scene_1" type="Node2D"]
 
-[node name="QuestUI" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="QuestUI" type="CanvasLayer" parent="."]
 script = ExtResource("1_elocp")
 
-[node name="Panel" type="Panel" parent="QuestUI"]
-layout_mode = 1
-anchors_preset = -1
-anchor_top = 0.5
-anchor_bottom = 0.5
-offset_top = -165.0
-offset_right = 350.0
-offset_bottom = 235.0
-grow_vertical = 2
+[node name="PanelContainer" type="PanelContainer" parent="QuestUI"]
+custom_minimum_size = Vector2(250, 50)
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -250.0
+offset_top = 20.0
+offset_right = -20.0
+offset_bottom = 20.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_elocp")
 
-[node name="Label" type="Label" parent="QuestUI/Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
-text = "퀘스트 목록"
-label_settings = SubResource("LabelSettings_a2qhw")
-
-[node name="QuestList" type="VBoxContainer" parent="QuestUI/Panel"]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Label" type="Label" parent="QuestUI/Panel/QuestList"]
+[node name="quest_list" type="VBoxContainer" parent="QuestUI/PanelContainer"]
 layout_mode = 2
 
 [node name="방지턱" type="TileMapLayer" parent="."]
@@ -4473,7 +4458,7 @@ shape = SubResource("RectangleShape2D_gk6se")
 position = Vector2(-123, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="police/Area2D"]
-position = Vector2(-1.25, 39)
+position = Vector2(27.5, 39)
 shape = SubResource("RectangleShape2D_572ix")
 
 [node name="Area2D2" type="Area2D" parent="."]
@@ -4498,7 +4483,7 @@ vertical_alignment = 2
 
 [node name="Panel" type="Panel" parent="DialogueUI"]
 visible = false
-anchors_preset = -1
+anchors_preset = 12
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
