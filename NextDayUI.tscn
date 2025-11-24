@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://ciwui21p8oj8t"]
 
 [ext_resource type="Script" uid="uid://xk2p6mwv8k76" path="res://day1/next_day_ui.gd" id="1_d67ng"]
-[ext_resource type="Texture2D" uid="uid://bnw4jtoqbjk0p" path="res://Fantasy  GUI/UI/RightArrowButton_7x10.png" id="2_wvkes"]
+[ext_resource type="Texture2D" uid="uid://ct7cieh85n8g3" path="res://Fantasy  GUI/UI/RightArrowButton_7x10.png" id="2_wvkes"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_85gc6"]
 bg_color = Color(0.644989, 0.602078, 0.426057, 1)
