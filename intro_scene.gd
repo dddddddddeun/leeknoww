@@ -8,6 +8,7 @@ extends Control
 	"SPACE 버튼을 눌러 조사를 시작하세요."
 ]
 
+
 # 마지막에 넘어갈 씬
 @export_file("*.tscn")
 var next_scene: String = "res://scenes/Stage1.tscn"
@@ -24,6 +25,9 @@ var typing_timer: float = 0.0       # 시간 누적용
 var is_typing: bool = false         # 타이핑 중인지 여부
 
 func _ready() -> void:
+	# 폰트 바꾸기
+	var f: FontFile = load("res://ThinDungGeunMo.ttf")
+	label.add_theme_font_override("font", f)
 	set_process(true)  # _process(delta) 켜기
 	_start_line()      # 첫 번째 줄 시작
 
