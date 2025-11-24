@@ -2,7 +2,11 @@
 
 [ext_resource type="Script" uid="uid://2tupkx6l6cl0" path="res://day1/day_ui.gd" id="1_v3jlw"]
 [ext_resource type="Script" uid="uid://5d0w2388o1he" path="res://day1/day_label.gd" id="2_qi3kt"]
+<<<<<<< HEAD
 [ext_resource type="FontFile" uid="uid://dkx03i7f1i8u6" path="res://ThinDungGeunMo.ttf" id="2_x776d"]
+=======
+[ext_resource type="FontFile" uid="uid://hglyecu8fhhm" path="res://ThinDungGeunMo.ttf" id="2_x776d"]
+>>>>>>> 514c9dae7b8f6e423f06b5d23c70dc0029acf6d4
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x776d"]
 bg_color = Color(0.714005, 0.57222, 0.400751, 1)

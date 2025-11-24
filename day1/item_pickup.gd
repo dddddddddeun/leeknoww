@@ -9,11 +9,11 @@ func _ready() -> void:
 	body_exited.connect(_on_body_exited)
 
 func _on_body_entered(body: Node) -> void:
-	if body.is_in_group("player"):
+	if body.is_in_group("Player"):
 		player_in_range = true
 
 func _on_body_exited(body: Node) -> void:
-	if body.is_in_group("player"):
+	if body.is_in_group("Player"):
 		player_in_range = false
 
 func _unhandled_input(event: InputEvent) -> void:
